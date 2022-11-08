@@ -121,7 +121,7 @@ export default function Shop() {
                 <div className="row">
                   <i className="fa-solid fas fa-person-dolly-empty"></i>{" "}
                 </div>{" "}
-                No Books Matched
+                No Books Matched!!
               </div>
             )}
           </div>
