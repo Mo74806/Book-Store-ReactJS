@@ -1,0 +1,125 @@
+.side-card {
+  transform: translateY(-80px) scale(0.7);
+}
+
+.deal-week-main {
+  border: 0;
+  border-radius: 25px;
+  overflow: hidden;
+  justify-content: center;
+  height: fit-content;
+}
+.deal-week-main img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+.floating-book {
+  z-index: 3;
+  top: 10%;
+}
+
+.text-container {
+  bottom: 75px;
+  left: 100px;
+}
+
+.text-container1 {
+  bottom: 25px;
+  right: 20%;
+}
+.deal-btn {
+  background-color: #fccc4d;
+  height: 3rem;
+  color: black;
+  transition: all 0.5s;
+}
+.deal-btn:hover {
+  background-color: #cea83e;
+  transition: all 0.5s;
+}
+.deal-btn1 {
+  background-color: mediumseagreen;
+  height: 3rem;
+  color: black;
+  transition: all 0.5s;
+}
+.deal-btn1:hover {
+  background-color: green;
+  transition: all 0.5s;
+}
+.text-md {
+  font-size: 1rem;
+}
+@-webkit-keyframes wobble-horizontal-on-hover {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes wobble-horizontal-on-hover {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.wobble-horizontal-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-horizontal-on-hover:hover,
+.wobble-horizontal-on-hover:focus,
+.wobble-horizontal-on-hover:active {
+  -webkit-animation-name: wobble-horizontal-on-hover;
+  animation-name: wobble-horizontal-on-hover;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}

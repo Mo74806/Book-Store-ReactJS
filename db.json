@@ -1,0 +1,179 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Book of Five Rings",
+      "price": 439.83,
+      "author": {
+        "name": "Georgia Ramirez"
+      },
+      "priceDiscount": 0,
+      "fullDescription": "Aut quidem cupiditate qui. Quod laudantium et quos dignissimos. Magni ea ad delectus mollitia fuga porro. Voluptate ipsum magnam eos voluptas omnis voluptates et. Quasi exercitationem ea ipsa consectetur aut laborum veniam voluptatem. Labore aut esse nulla explicabo ut similique incidunt cum. Eaque dolorem eum soluta ad exercitationem quibusdam unde. Ducimus vel voluptatem iure qui aspernatur sit voluptatum. Consequatur quia aperiam aliquid reiciendis quasi culpa sit. Expedita eos voluptatum eum.",
+      "description": "Consequatur aut voluptatem provident distinctio. Necessitatibus laboriosam qui voluptatum ut magni. Ad hic excepturi pariatur velit",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/29.jpg",
+      "category": [
+        "Contemporary",
+        "Cultural"
+      ],
+      "ratingAvg": 4,
+      "numberOfSeller": 15,
+      "qty": 1
+    },
+    {
+      "id": 2,
+      "title": "Treachery: Alpha Colony Book 8",
+      "price": 814.66,
+      "author": {
+        "name": "Jessica Munoz"
+      },
+      "priceDiscount": 0,
+      "fullDescription": "Debitis id qui fuga delectus voluptates et id. Est porro alias aut. Cumque molestias qui dolores et laboriosam laboriosam qui. Et voluptatem sed quo.",
+      "description": "Animi qui et nemo consequatur iste totam et. Id nihil id enim consequatur provident non. Ratione est voluptas aperiam vero architecto.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/28.jpg",
+      "category": [
+        "Action & Adventure",
+        "Activity Books",
+        "Cars & Trucks",
+        "Cultural"
+      ],
+      "ratingAvg": 5,
+      "numberOfSeller": 75,
+      "qty": 1
+    },
+    {
+      "id": 3,
+      "title": "Blood on the Snow",
+      "price": 216.98,
+      "author": {
+        "name": " Rex Rios"
+      },
+      "priceDiscount": 0,
+      "fullDescription": "Odit qui omnis qui aut labore unde rerum. Quia assumenda praesentium quo qui. Tenetur architecto sequi natus vitae doloremque qui. Maxime asperiores fugit ipsam quo aut. Dolorum quia magni eaque voluptates consequuntur.Facilis eius tenetur soluta pariatur et molestiae. Quisquam dolor veniam numquam in doloribus eos. Velit nihil quaerat enim exercitationem possimus.Ipsam tempora eum quia. Eveniet eos repudiandae quia veritatis. Vitae doloremque iusto eveniet.",
+      "description": "Sed voluptatem neque mollitia possimus. Ut quia consequatur ut quia fuga eos et. Vel quo deserunt porro maiores voluptas error. Expedita quo cupiditate doloremque illo commodi atque placeat.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/27.jpg",
+      "category": [
+        "Action & Adventure",
+        "Cultural"
+      ],
+      "ratingAvg": 4,
+      "numberOfSeller": 32,
+      "qty": 1
+    },
+    {
+      "id": 4,
+      "title": "The Girl and the Last Sleepover",
+      "price": 450,
+      "author": {
+        "name": "Suzanne Casey"
+      },
+      "priceDiscount": 18,
+      "fullDescription": "Aut eligendi voluptatem adipisci unde iusto. Vitae aut voluptas velit beatae at nam maiores. Sunt dolorem cumque qui sit in esse quia occaecati. Eos et vero optio eaque nemo.Qui omnis nihil accusantium dolorum molestiae. Assumenda rem et non. Aut fugiat fugiat voluptatum vero vitae error. Sequi fugit vitae dolor velit. Nemo et sapiente repudiandae.Quam dolorum accusantium odio amet. Commodi consequatur distinctio voluptas repellat doloribus quia. Consectetur ad similique atque voluptas ut.Earum vel delectus in facilis. Voluptatum minus nobis cum temporibus perferendis est ut. Sed aut saepe ipsum animi asperiores. Nihil nihil repudiandae adipisci quis ea voluptatum dicta.",
+      "description": "Nihil quo dolorum debitis velit qui et inventore. Delectus aut occaecati sunt mollitia illo. Odio velit mollitia ipsam explicabo nisi quisquam dolore non. Rem omnis consectetur et ea.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/31.jpg",
+      "category": [
+        "Action & Adventure",
+        "Activity Books"
+      ],
+      "ratingAvg": 3,
+      "numberOfSeller": 36,
+      "qty": 1
+    },
+    {
+      "id": 5,
+      "title": "Feral: Shadow Bred: Book 3",
+      "price": 50,
+      "author": {
+        "name": "Randal Adkins"
+      },
+      "priceDiscount": 0,
+      "fullDescription": "Est vero nam iure quia quisquam libero dolorem rerum. Molestias maxime sunt doloribus. Consectetur veniam eum quia qui animi debitis. Eligendi consequuntur autem aut accusamus nihil quidem qui at.Ut facere distinctio temporibus pariatur. Vel a ducimus eum voluptas nihil. Dignissimos exercitationem ipsam voluptatibus alias dolorem nobis et ea. Aliquam est eos dolor harum dignissimos.Impedit vel sunt voluptatibus repellendus. Ipsa perferendis sit non vitae. In libero est quo excepturi cumque praesentium. Sequi architecto debitis distinctio ut saepe amet.",
+      "description": "Quo modi quas eius nulla in qui ut. Veniam optio in inventore eligendi amet delectus eligendi sit. Provident enim excepturi sunt eligendi voluptatum quibusdam.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/19.jpg",
+      "category": [
+        "Foreign Language",
+        "Historical"
+      ],
+      "ratingAvg": 0,
+      "numberOfSeller": 0,
+      "qty": 1
+    },
+    {
+      "id": 6,
+      "title": "The Murder of Roger Ackroyd",
+      "price": 13.47,
+      "author": {
+        "name": "Karla Newman"
+      },
+      "priceDiscount": 26,
+      "fullDescription": "A nice edition with the cover from the dust jacket of the first edition.The Murder of Roger Ackroyd is a work of detective fiction by British writer Agatha Christie, first published in 1926. It is the third novel to feature Hercule Poirot as the lead detective. Poirot retires to a village near the home of a friend, Roger Ackroyd, to pursue a project to perfect vegetable marrows. Soon after, Ackroyd is murdered and Poirot must come out of retirement to solve the case. The novel was well-received and was voted by the British Crime Writers’ Association as the best crime novel ever. Its innovative twist ending had a significant impact on the genre. It is often called Agatha Christie’s masterpiece.",
+      "description": "A nice edition with the cover from the dust jacket of the first edition.The Murder of Roger Ackroyd is a work of detective fiction by British writer Agatha Christie, first published in 1926. It is the third novel to feature Hercule Poirot as the lead detective.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/12.jpg",
+      "category": [
+        "Cars & Trucks",
+        "Crime"
+      ],
+      "ratingAvg": 4,
+      "numberOfSeller": 105,
+      "qty": 1
+    },
+    {
+      "id": 7,
+      "title": "City of the Dead",
+      "price": 28.28,
+      "author": {
+        "name": "Rita James"
+      },
+      "priceDiscount": 65,
+      "fullDescription": "Hawk, the daughter of Maximum Ride, teams with her mother up to help save their beloved but dangerous city in this action-packed thriller.For Hawk, being a hero weighs heavily on her wings.In the City of the Dead, life happens in the shadows. That’s why a war is brewing against an enemy no one can see.Hawk and Maximum Ride never back down from a conflict, or from each other, and they argue more than they agree.But as the dead begin to outnumber the living, a mother’s experience and a daughter’s instinct can make one powerful arsenal.",
+      "description": "Hawk, the daughter of Maximum Ride, teams with her mother up to help save their beloved but dangerous city in this action-packed thriller.",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/2.jpg",
+      "category": [
+        "Action & Adventure",
+        "Activity Books",
+        "Classics"
+      ],
+      "ratingAvg": 3.5,
+      "numberOfSeller": 42,
+      "qty": 1
+    },
+    {
+      "id": 8,
+      "title": "The Dirty and the Dead",
+      "price": 17.03,
+      "author": {
+        "name": "Tricia Allison"
+      },
+      "priceDiscount": 41,
+      "fullDescription": "Investigating war crimes isn’t Assistant Commissioner Caelin Morrow’s usual sort of case. She normally hunts down corrupt Commonwealth officials. But with the reorganization of the Professional Compliance Bureau’s Anti-Corruption Division, Morrow inherits primary responsibility for military crimes requiring outside scrutiny. And for her first case as the new head of Anti-Corruption Unit 12 (Military Crimes), she’s heading for the Novaya Sibir star system with her team to look into allegations the elite 212th Pathfinder Squadron committed atrocities on a Protectorate Zone rogue colony. But all is not as it seems, and dirty politics soon rear their ugly head. Unfortunately for those who play fast and loose with the truth, Caelin Morrow is not only a crack investigator. She’ll also do whatever is necessary to take out the garbage.",
+      "description": "Investigating war crimes isn’t Assistant Commissioner Caelin Morrow’s usual sort of case. She normally hunts down corrupt Commonwealth officials",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/6.jpg",
+      "category": [
+        "Action & Adventure",
+        "Activity Books",
+        "Cultural",
+        "Historical"
+      ],
+      "ratingAvg": 4,
+      "numberOfSeller": 62,
+      "qty": 1
+    },
+    {
+      "id": 16,
+      "title": "rrrrrr",
+      "price": "5",
+      "author": {
+        "name": "ksjkjds"
+      },
+      "priceDiscount": "45",
+      "fullDescription": "sdkjdksjksdj",
+      "description": "kjdjjddjkdjks",
+      "imageCover": "kjdfkjfdkjfkd",
+      "category": [
+        "Arts & Literature"
+      ],
+      "ratingAvg": 0,
+      "numberOfSeller": 0,
+      "qty": 1
+    }
+  ]
+}

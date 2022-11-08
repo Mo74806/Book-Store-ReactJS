@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+body {
+  margin: 0;
+  background-color: #f8f8ff !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* * {
+  border: 1px solid red;
+} */
