@@ -1,0 +1,35 @@
+.side-dash {
+  height: 500px;
+}
+
+.side-dash .row {
+  height: 100px;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 20px;
+  border-bottom: 1px solid gray;
+  background-color: black;
+  color: white;
+}
+
+.side-dash .row:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+}
+
+.section-btn1 {
+  border: 1px solid rgb(71, 70, 70);
+  font-weight: bolder;
+  transition: all 0.5s;
+}
+
+.section-btn1:hover {
+  border: 1px solid rgb(71, 70, 70);
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+  transition: all 0.5s;
+}

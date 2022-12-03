@@ -9,12 +9,12 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  transition: all 0.5;
+  transition: all 0.7;
 }
 
 .section-btn:hover {
   color: #f65d4e;
   background-color: white;
   border: 1px solid #f65d4e;
-  transition: all 0.5;
+  transition: all 0.7;
 }

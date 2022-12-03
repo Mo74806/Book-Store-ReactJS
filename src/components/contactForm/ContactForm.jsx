@@ -63,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="formcontain row">
+    <div className="formcontain m-0 row">
       <div className="py-5 my-5">
         <div className=" m-auto">
           <div className="row  d-flex justify-content-center">

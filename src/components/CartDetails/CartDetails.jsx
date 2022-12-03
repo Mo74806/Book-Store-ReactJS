@@ -28,21 +28,21 @@ export default function CartDetails() {
 
   return (
     <>
-      <PageMainTitle title="Order Summary" />{" "}
+      <PageMainTitle title="Cart" />{" "}
       <div className="row m-5 d-flex justify-content-center">
         <div className="col-lg-7 my-5 my-lg-0 col-12 px-5 book1 ">
-          {cart &&
+          {cart.length != 0 &&
             cart.map((book, index) => (
               <div key={index} className="line-under">
                 <SingleItemDetails book={book} />
               </div>
             ))}
         </div>
-        <div className="col-lg-5 col-10 my-lg-0 my-5 p-5 bg-white rounded">
+        <div className="col-lg-5 side-card col-10 my-lg-0 my-5 px-5 py-3 bg-white rounded">
           <div className="title fw-semibold fs-3">Total</div>
           <div className="mb-4 side-details">
             {" "}
-            {cart &&
+            {cart.length != 0 &&
               cart.map((book, index) => (
                 <div key={index} className="line-under">
                   <SingleItemDetailsSide book={book} />

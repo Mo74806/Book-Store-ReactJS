@@ -20,16 +20,16 @@ export default function Popular() {
           <SectionTitle title="Popular Books"></SectionTitle>
         </div>
       </div>
-      <div className="row m-0 ">
-        <div className="col-8">
-          <div className="row d-flex-justify-content-center px-md-5 p-xs-5  m-0 ">
+      <div >
+        <div className="col-xl-12  col-12 px-xg-0  px-5 py-3 d-flex justify-content-center ">
+          <div className="row d-flex justify-content-center    m-0 ">
             {books
               ? books.map(
                   (item, index) =>
                     index <= 5 && (
                       <div
                         key={index}
-                        className={`col-xl-4  col-md-6 col-sm-6  col-xs-6 p-xs-5    mt-4 book2 ${
+                        className={`col-xl-4  col-md-4 col-sm-3  col-xs-6 p-xs-5    mt-4 book2 ${
                           !((index + 1) % 3 === 0) && "book1"
                         } `}
                       >
@@ -39,18 +39,17 @@ export default function Popular() {
                 )
               : null}
           </div>
-        </div>
-        <div className="col-3">
-          <div className="row ads mt-5 py-5">
-            <div className="sale px-5  d-flex align-items-center pt-5 mt-5 fw-bold fs-1 text-white">
-              Save <span className="bg-black px-3 py-2 text-danger">50%</span>
+
+        <div className="col-3 d-none d-xl-block">
+          <div className="  ads ">
+            <div className="  m-0  d-flex   text- fw-bold fs-1 ">
+
             </div>
-            <div className="fw-bold fs-1 px-5 fw-bolder text-white">
-              Find Book you love
-            </div>
+          
           </div>
         </div>
       </div>
     </div>
+            </div>
   );
 }

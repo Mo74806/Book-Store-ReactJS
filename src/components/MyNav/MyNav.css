@@ -4,11 +4,10 @@
   box-sizing: border-box;
 }
 .active {
-  color: black !important;
+  color: rgb(226, 87, 62) !important;
   font-size: 1.5rem;
-  /* size: 3rem !important; */
   font-weight: bolder;
-  background-color: #673ab7;
+  background-color: #673ab7 !important;
 
   text-decoration: underline 2px black;
 }
@@ -22,8 +21,8 @@ body {
 }
 
 .item-link {
-  color: white !important;
-  background-color: #989595;
+  color: black !important;
+  background-color: transparent;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 
   border-radius: 25px;
@@ -169,8 +168,8 @@ a {
   position: relative;
   width: 3rem;
   height: 3rem;
-  padding: 6px 7px;
-  background-color: rgb(196, 71, 49);
+  padding: 4px 7px;
+  background-color: rgb(215, 108, 89);
   border-radius: 50%;
   color: white;
   font-weight: bolder;
@@ -180,13 +179,16 @@ a {
 }
 
 .bar-item {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 .item-link {
   text-decoration: none;
 }
+.item-link:hover .bar-item,
 .item-link:hover {
   transform: scale(1.1);
-  transition: all 0.3s;
+  background-color: black;
+  color: white !important;
+  transition: all 0.5s;
 }

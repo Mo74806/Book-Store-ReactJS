@@ -5,15 +5,19 @@ import WhatsInTrend from "../components/WhatsInTrend/WhatsInTrend";
 import WhatsPeopleSay from "../components/WhatsPeopleSay/WhatsPeopleSay";
 import Popular from "../components/Popular/Popular";
 import Landing from "../components/Landing/Landing";
+import { useDispatch, useSelector } from "react-redux";
 export default function Home() {
-  return (
-    <div>
-      <Landing />
+  const { user } = useSelector((state) => state.userType);
+  
+return  (<div>
+{user === "user"&&  
+      (<div><Landing />
       <SwiperSection />
       <DealOfWeek />
       <WhatsInTrend />
       <WhatsPeopleSay />
-      <Popular />
-    </div>
-  );
+      <Popular /></div>)}
+    </div>)
+  
+
 }

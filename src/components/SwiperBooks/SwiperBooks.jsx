@@ -17,8 +17,13 @@ export default function SwiperBooks() {
   }, []);
   return (
     <Swiper
+    className="py-5"
       spaceBetween={50}
       slidesPerView={4}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
       onSlideChange={() => {}}
       onSwiper={(swiper) => {}}
       breakpoints={{
@@ -41,8 +46,8 @@ export default function SwiperBooks() {
       }}
     >
       {books.map((book, index) => (
-        <SwiperSlide key={index}>
-          <BookCard book={book}></BookCard>
+        <SwiperSlide   key={index}>
+          <BookCard  book={book}></BookCard>
         </SwiperSlide>
       ))}
     </Swiper>

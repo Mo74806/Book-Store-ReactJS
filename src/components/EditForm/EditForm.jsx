@@ -17,12 +17,21 @@ import { editBook } from "../../store/reducer/booksSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { SafetyCheck } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { getBooks } from "../../store/reducer/booksSlice";
 export default function EditForm() {
-  const { id } = useParams();
+  let book = {};
 
-  // let [check, setCheck] = useState(-2);
+  const { id } = useParams();
+  const { books } = useSelector((state) => state.booksList);
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
+  let navigate = useNavigate();
+  // let [check, setCheck] = useState(-2);
   let categories = [
     "Action & Adventure",
     "Activity Books",
@@ -49,9 +58,8 @@ export default function EditForm() {
     imageCover: null,
     categories: null,
   });
-
   const [form, setForm] = useState({
-    title: "",
+    title: book.title,
     authorName: "",
     price: "",
     priceDiscount: 0,
@@ -60,6 +68,17 @@ export default function EditForm() {
     imageCover: "",
     categories: [],
   });
+  useEffect(() => {
+    console.log(books[parseInt(id)]);
+
+    book = books.map((item) => {
+      if (item.id == id) {
+        console.log(item.id == id);
+        setForm({ item });
+        return item;
+      }
+    });
+  }, [books]);
 
   // useEffect(() => {
   //   setCheck(check + 2);
@@ -80,14 +99,17 @@ export default function EditForm() {
         priceDiscount: form.priceDiscount,
         fullDescription: form.fullDescription,
         description: form.description,
-        imageCover: form.imageCover,
+        imageCover: "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/29.jpg",
         category: form.categories,
         ratingAvg: 0,
         numberOfSeller: 0,
         qty: 1,
       })
     );
+    navigate("/admin");
   };
+
+  // console.log(book);
   let handleChange = (id, value) => {
     if (value.length == 0) {
       setError({ ...error, [id]: "you must enter data" });
@@ -153,11 +175,11 @@ export default function EditForm() {
     console.log(e.target.className);
   };
   return (
-    <>
-      <div className="row ">
+   <>
+      <div className="row  ">
         <PageMainTitle title="New Book" />
       </div>
-      <div className="row d-flex justify-content-center ">
+      <div className="row d-flex my-5 justify-content-center ">
         <Box
           component="form"
           sx={{
@@ -171,14 +193,19 @@ export default function EditForm() {
             <div className={`col-lg-6  col-10 m-0  form1   `}>
               <div className="col-12 page-title-container py-3 px-3 m-0 mb-5 ">
                 <div className=" col-lg-6 col-12 m-0 fs-3 fw-bold">
-                  Book Details
+                  Book Details:
                 </div>{" "}
               </div>
               <div className="row m-0 d-flex justify-content-center">
-                <div className="col-6 m-0 ">
+                <div className="col-9  m-0 ">
+                  <label htmlFor="" className="col-5 fs-3  my-4 fw-semibold ">
+                    Title:
+                  </label>
                   <TextField
                     required
                     id="title"
+                    
+                    className="bg-light"
                     label="Book Title"
                     defaultValue={form.title}
                     onChange={(defaultValue) => {
@@ -190,10 +217,14 @@ export default function EditForm() {
                       {error.title}
                     </p>
                   )}
+                  <label htmlFor="" className="fs-6  col-5 my-4  fw-semibold">
+                    Author Name:
+                  </label>
                   <TextField
                     required
                     id="authorName"
                     focused=""
+                    className="bg-light"
                     label="Author Name"
                     defaultValue={form.authorName}
                     name="authorName"
@@ -202,13 +233,17 @@ export default function EditForm() {
                     }}
                   />
                   {error.authorName && (
-                    <p className="text-sm text-danger px-3 py-1">
+                    <p className=" text-sm text-danger px-3 py-1">
                       {error.authorName}
                     </p>
                   )}
+                  <label htmlFor="" className=" fs-3 col-5 my-4 col-3 fw-semibold">
+                    Price:
+                  </label>
                   <TextField
                     required
                     id="price"
+                    className="bg-light"
                     label="Book Price"
                     defaultValue={form.price}
                     name="price"
@@ -221,9 +256,13 @@ export default function EditForm() {
                       {error.price}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-4 my-4 col-3 fw-semibold">
+                    Discount:
+                  </label>
                   <TextField
                     id="priceDiscount"
                     label="Price Discound"
+                    className="bg-light"
                     defaultValue={form.priceDiscount}
                     name="priceDiscount"
                     onChange={(defaultValue) => {
@@ -235,11 +274,15 @@ export default function EditForm() {
                       {error.priceDiscount}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-3 my-4 col-3 fw-semibold">
+                    Breif:
+                  </label>
                   <TextField
                     required
                     id="description"
                     label="Brief Description"
                     multiline
+                    className="bg-light"
                     rows={4}
                     defaultValue={form.description}
                     name="description"
@@ -252,12 +295,16 @@ export default function EditForm() {
                       {error.description}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-5   my-4 col-3 fw-bold">
+                    Full Description:
+                  </label>
                   <TextField
                     required
                     id="fullDescription"
                     label="Full Description"
                     multiline
                     rows={4}
+                    className="bg-light "
                     defaultValue={form.fullDescription}
                     name="fullDescription"
                     onChange={(defaultValue) => {
@@ -286,17 +333,17 @@ export default function EditForm() {
               {categories.map((item) => (
                 <div key={item} className="p-2">
                   {" "}
-                  <Fab
+                  <div
                     variant="extended"
                     size="small"
                     color="inherit"
                     aria-label="add"
+                    className="add-btn rounded-pill border-gray border px-2 bg-dark py-1 text-sm text-light"
                     name={item}
                     onClick={handleCategory}
                   >
-                    <NavigationIcon sx={{ mr: 1 }} />
                     {item}
-                  </Fab>
+                  </div>
                 </div>
               ))}
             </div>
@@ -309,11 +356,13 @@ export default function EditForm() {
                 </div>{" "}
               </div>
               <div className="p-2">
+             
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <Button
                     className="bg-secondary"
                     variant="contained"
                     component="label"
+                    
                   >
                     Upload
                     <input hidden accept="image/*" multiple type="file" />
@@ -323,24 +372,16 @@ export default function EditForm() {
                     color="primary"
                     aria-label="upload picture"
                     component="label"
+
                   >
                     <input hidden accept="image/*" type="file" />
                     <PhotoCamera />
                   </IconButton>
                 </Stack>
               </div>
-              <div className="col-6 mb-5 row ">
+              <div className="col-12 mb-5 row ">
                 {" "}
-                <TextField
-                  required
-                  id="imageCover"
-                  label="Book Cover Image"
-                  defaultValue={form.imageCover}
-                  name="imageCover"
-                  onChange={(defaultValue) => {
-                    handleChange("imageCover", defaultValue.target.value);
-                  }}
-                />
+              
                 {error.imageCover && (
                   <p className="text-sm text-danger px-3 py-1">
                     {error.imageCover}
@@ -360,7 +401,7 @@ export default function EditForm() {
                 error.price == null &&
                 error.priceDiscount == null && (
                   <Button
-                    className="bg-dark py-3 mb-5 text-white rounded-pill  add-btn"
+                    className="bg-dark py-3 mb-5  rounded-pill  add-btn"
                     variant="contained"
                     fullWidth={true}
                     endIcon={<SendIcon />}
@@ -373,6 +414,5 @@ export default function EditForm() {
           </div>
         </Box>
       </div>
-    </>
-  );
+    </>  );
 }

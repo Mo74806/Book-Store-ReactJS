@@ -21,7 +21,7 @@ export default function BookCard2(props) {
   //track the state of book if it added to cart or not
   useEffect(() => {
     if (added == true) dispatch(cartActions.addToCart(props.book));
-    else dispatch(cartActions.removeFromCart(props.book));
+    else if (added == false) dispatch(cartActions.removeFromCart(props.book));
   }, [added]);
 
   //add book to card function
@@ -41,7 +41,7 @@ export default function BookCard2(props) {
               >
                 <i className="icon fa-regular fa-eye"></i>
               </button>
-              {added ? (
+              {added == true ? (
                 <button
                   onClick={() => addCart(props.book)}
                   className="group-action--btn toggle-cart"
@@ -86,9 +86,6 @@ export default function BookCard2(props) {
           <div className="row my-5 align-items-center">
             <div className="col-12 price px-3 fs-4  fw-semibold price">
               ${props.book.price}
-            </div>
-            <div className="col-12   price-before-discount  fw-semibold fs-7  text-black-50">
-              $ {props.book.priceDiscount}
             </div>
           </div>
         </div>

@@ -18,7 +18,6 @@ const cartSlice = createSlice({
         console.log(item.title);
         if (item.title != action.payload.title) return item;
       });
-
       state.cart = data;
     },
     increaseQty: (state, action) => {

@@ -98,25 +98,6 @@
       "qty": 1
     },
     {
-      "id": 6,
-      "title": "The Murder of Roger Ackroyd",
-      "price": 13.47,
-      "author": {
-        "name": "Karla Newman"
-      },
-      "priceDiscount": 26,
-      "fullDescription": "A nice edition with the cover from the dust jacket of the first edition.The Murder of Roger Ackroyd is a work of detective fiction by British writer Agatha Christie, first published in 1926. It is the third novel to feature Hercule Poirot as the lead detective. Poirot retires to a village near the home of a friend, Roger Ackroyd, to pursue a project to perfect vegetable marrows. Soon after, Ackroyd is murdered and Poirot must come out of retirement to solve the case. The novel was well-received and was voted by the British Crime Writers’ Association as the best crime novel ever. Its innovative twist ending had a significant impact on the genre. It is often called Agatha Christie’s masterpiece.",
-      "description": "A nice edition with the cover from the dust jacket of the first edition.The Murder of Roger Ackroyd is a work of detective fiction by British writer Agatha Christie, first published in 1926. It is the third novel to feature Hercule Poirot as the lead detective.",
-      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/12.jpg",
-      "category": [
-        "Cars & Trucks",
-        "Crime"
-      ],
-      "ratingAvg": 4,
-      "numberOfSeller": 105,
-      "qty": 1
-    },
-    {
       "id": 7,
       "title": "City of the Dead",
       "price": 28.28,
@@ -158,22 +139,23 @@
       "qty": 1
     },
     {
-      "id": 16,
-      "title": "rrrrrr",
-      "price": "5",
+      "title": "new",
+      "price": "10",
       "author": {
-        "name": "ksjkjds"
+        "name": "mostafa khaled"
       },
-      "priceDiscount": "45",
-      "fullDescription": "sdkjdksjksdj",
-      "description": "kjdjjddjkdjks",
-      "imageCover": "kjdfkjfdkjfkd",
+      "priceDiscount": 0,
+      "fullDescription": "dfssssssssssss",
+      "description": "dsfffffffffffffffd",
+      "imageCover": "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/29.jpg",
       "category": [
-        "Arts & Literature"
+        null,
+        null
       ],
       "ratingAvg": 0,
       "numberOfSeller": 0,
-      "qty": 1
+      "qty": 1,
+      "id": 9
     }
   ]
 }

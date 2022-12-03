@@ -78,3 +78,7 @@ ul li input {
   color: white;
   transition: all 0.5s;
 }
+
+.side-card1 {
+  transform: scale(0.8);
+}

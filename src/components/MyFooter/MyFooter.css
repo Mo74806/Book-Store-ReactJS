@@ -1,5 +1,7 @@
 footer {
-  background-color: #282828;
+  /* background-color: #282828; */
+  background-color: black;
+  background-image: url("../../../public/imgs/pj-accetturo-XpD6Dkui-yg-unsplash.jpg");
 }
 .text-sm {
   font-size: 0.8rem;

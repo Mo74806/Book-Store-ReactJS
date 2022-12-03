@@ -19,12 +19,13 @@ export default function Shop() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
+    handleFilter();
   }, []);
   //in the beging set the filtered books to the books came from server
-  useEffect(() => {
+  let handleFilter = () => {
     setFiltered(books);
     setBackup(books);
-  }, [books]);
+  };
 
   //set the filtered books with returned books after filteration operation
   let filterBooks = (books) => {
@@ -57,8 +58,8 @@ export default function Shop() {
   return (
     <>
       <PageMainTitle title="Shop" />
-      <div className="row d-flex justify-content-center  mx-4  mb-5 ">
-        <div className="col-3 d-xl-block d-none filter-section">
+      <div className="row mt-5 d-flex justify-content-center  mx-4  mb-5 ">
+        <div className=" col-3 d-xl-block  filter-section">
           <FilterOption
             name="Genere"
             options={[
@@ -100,10 +101,10 @@ export default function Shop() {
           />
           <div className="row my-2"></div>
 
-          <FeaturedBooks books={books} />
+          {/* <FeaturedBooks books={books} /> */}
           <div className="row my-4"></div>
         </div>
-        <div className="col-lg-9  col-12  text-center">
+        <div className="col-lg-9  col-9  text-center">
           <div className="row d-flex-justify-content-center px-md-5 p-xs-5  m-0 ">
             {filtered.length != 0 ? (
               filtered.map((item, index) => (
@@ -121,7 +122,7 @@ export default function Shop() {
                 <div className="row">
                   <i className="fa-solid fas fa-person-dolly-empty"></i>{" "}
                 </div>{" "}
-                No Books Matched!!
+                No Books Matched
               </div>
             )}
           </div>

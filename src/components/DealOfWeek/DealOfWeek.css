@@ -37,6 +37,7 @@
 }
 .deal-btn:hover {
   background-color: #cea83e;
+
   transition: all 0.5s;
 }
 .deal-btn1 {

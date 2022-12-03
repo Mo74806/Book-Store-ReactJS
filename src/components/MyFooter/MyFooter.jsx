@@ -8,7 +8,7 @@ export default function MyFooter() {
         <div className=" row footer-first">
           <div className="col-12 col-lg-2 my-5 ">
             <div className=" ">
-              <div className="logo text-white h2 fw-bold">Dragon</div>
+              <div className="logo text-white h2 fw-bold">Bookory</div>
               <div className="address my-3 text-sm text-white-50">
                 64,Imbaba,Giza,Egypt
               </div>

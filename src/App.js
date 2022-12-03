@@ -21,13 +21,20 @@ import CartPage from "./Pages/CartPage";
 import ContactForm from "./components/contactForm/ContactForm";
 import NewForm from "./components/NewForm/NewForm";
 import EditForm from "./components/EditForm/EditForm";
+import DashBoard from "./components/DashBoard/DashBoard";
+import Login from "./components/Login/Login";
 function App() {
   return (
     <div className="col-12">
       <MyNav />
       {/* <NewForm /> */}
+      {/* <Login /> */}
       <Routes>
+        <Route path="/" element={<Login />} />
+
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/admin" element={<DashBoard />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/book/:id" element={<Book />} />
         <Route path="/cart" element={<CartPage />} />

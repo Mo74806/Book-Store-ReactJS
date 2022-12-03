@@ -108,6 +108,7 @@ export default function DealOfWeek() {
               <div className="row m-0 p-0 side-card">
                 <BookCard2 book={books[3]} />
               </div>
+              <div className="row border side-card "></div>
               <div className="row m-0 p-0 side-card">
                 <BookCard2 book={books[5]} />
               </div>

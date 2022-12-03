@@ -13,13 +13,13 @@ export default function WhatsInTrend() {
     dispatch(getBooks());
   }, []);
   return (
-    <div>
+    <div className="m-0 mb-5">
       {" "}
-      <div className="row m-5">
-        <div className="my-3">
+      <div className="row m-0 mx-5">
+        <div className="mb-3">
           <SectionTitle title="What's In Trend"></SectionTitle>
         </div>
-        <div className="row d-flex align-items-center justify-content-center">
+        <div className="row d-flex align-items-center  p-5 justify-content-center">
           <div className="col-lg-5 col-10 p-5 my-2 mx-3 trend border">
             {books.length !== 0 ? <BookCard2 book={books[1]} /> : null}
           </div>

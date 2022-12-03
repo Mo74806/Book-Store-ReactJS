@@ -40,6 +40,18 @@ div {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
+
+.discount{
+position:absolute;
+right:-20px;
+top:-30px;
+transform:scale(1.5);
+font-size:0.8rem;
+font-weight:bold;
+background-color:darkorange;
+text-align:center;
+}
+
 .group-action--btn:hover {
   background-color: white;
   transition: all 0.4s;

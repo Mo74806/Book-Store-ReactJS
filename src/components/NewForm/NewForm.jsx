@@ -18,8 +18,12 @@ import { addBook } from "../../store/reducer/booksSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { SafetyCheck } from "@mui/icons-material";
+import { Navigate, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 export default function NewForm() {
   // let [check, setCheck] = useState(-2);
+  const { books } = useSelector((state) => state.booksList);
+
   const dispatch = useDispatch();
   let categories = [
     "Action & Adventure",
@@ -48,6 +52,7 @@ export default function NewForm() {
     categories: null,
   });
 
+  let navigate = useNavigate();
   const [form, setForm] = useState({
     title: "",
     authorName: "",
@@ -59,10 +64,17 @@ export default function NewForm() {
     categories: [],
   });
 
+  let handleImage = (e) => {
+    console.log(e.target.value);
+  };
   // useEffect(() => {
   //   setCheck(check + 2);
   //   console.log(error);
   // }, [error]);
+  let navigateToShop = () => {
+    navigate("/admin");
+    // console.log("sssssssssss");
+  };
 
   let handleAdd = () => {
     // console.log(check);
@@ -77,13 +89,14 @@ export default function NewForm() {
         priceDiscount: form.priceDiscount,
         fullDescription: form.fullDescription,
         description: form.description,
-        imageCover: form.imageCover,
+        imageCover: "https://demo2.pavothemes.com/bookory/wp-content/uploads/2022/02/29.jpg",
         category: form.categories,
         ratingAvg: 0,
         numberOfSeller: 0,
         qty: 1,
       })
     );
+    navigateToShop();
   };
   let handleChange = (id, value) => {
     if (value.length == 0) {
@@ -139,22 +152,22 @@ export default function NewForm() {
     setIsActive((current) => !current);
     if (!isActive) {
       e.target.className =
-        "MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-sizeSmall MuiFab-primary MuiFab-root MuiFab-extended MuiFab-sizeSmall MuiFab-primary css-133uy8j-MuiButtonBase-root-MuiFab-root rounded-pill text-white border border-0  bg-dark";
+        "rounded-pill border-gray border px-2 bg-warning py-1 text-sm text-dark";
       let category = [...form.categories, e.target.name];
       console.log(category);
       setForm({ ...form, categories: category });
     } else {
       e.target.className =
-        "MuiButtonBase-root MuiFab-root MuiFab-extended MuiFab-sizeSmall MuiFab-primary MuiFab-root MuiFab-extended MuiFab-sizeSmall MuiFab-primary css-133uy8j-MuiButtonBase-root-MuiFab-root bordr  border-0 py-1  shadow rounded-pill ";
+        "rounded-pill border-gray border px-2 bg-dark py-1 text-sm text-light";
     }
     console.log(e.target.className);
   };
   return (
-    <>
-      <div className="row ">
+      <>
+      <div className="row  ">
         <PageMainTitle title="New Book" />
       </div>
-      <div className="row d-flex justify-content-center ">
+      <div className="row d-flex my-5 justify-content-center ">
         <Box
           component="form"
           sx={{
@@ -168,14 +181,19 @@ export default function NewForm() {
             <div className={`col-lg-6  col-10 m-0  form1   `}>
               <div className="col-12 page-title-container py-3 px-3 m-0 mb-5 ">
                 <div className=" col-lg-6 col-12 m-0 fs-3 fw-bold">
-                  Book Details
+                  Book Details:
                 </div>{" "}
               </div>
               <div className="row m-0 d-flex justify-content-center">
-                <div className="col-6 m-0 ">
+                <div className="col-9  m-0 ">
+                  <label htmlFor="" className="col-5 fs-3  my-4 fw-semibold ">
+                    Title:
+                  </label>
                   <TextField
                     required
                     id="title"
+                    
+                    className="bg-light"
                     label="Book Title"
                     defaultValue={form.title}
                     onChange={(defaultValue) => {
@@ -187,10 +205,14 @@ export default function NewForm() {
                       {error.title}
                     </p>
                   )}
+                  <label htmlFor="" className="fs-6  col-5 my-4  fw-semibold">
+                    Author Name:
+                  </label>
                   <TextField
                     required
                     id="authorName"
                     focused=""
+                    className="bg-light"
                     label="Author Name"
                     defaultValue={form.authorName}
                     name="authorName"
@@ -199,13 +221,17 @@ export default function NewForm() {
                     }}
                   />
                   {error.authorName && (
-                    <p className="text-sm text-danger px-3 py-1">
+                    <p className=" text-sm text-danger px-3 py-1">
                       {error.authorName}
                     </p>
                   )}
+                  <label htmlFor="" className=" fs-3 col-5 my-4 col-3 fw-semibold">
+                    Price:
+                  </label>
                   <TextField
                     required
                     id="price"
+                    className="bg-light"
                     label="Book Price"
                     defaultValue={form.price}
                     name="price"
@@ -218,9 +244,13 @@ export default function NewForm() {
                       {error.price}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-4 my-4 col-3 fw-semibold">
+                    Discount:
+                  </label>
                   <TextField
                     id="priceDiscount"
                     label="Price Discound"
+                    className="bg-light"
                     defaultValue={form.priceDiscount}
                     name="priceDiscount"
                     onChange={(defaultValue) => {
@@ -232,11 +262,15 @@ export default function NewForm() {
                       {error.priceDiscount}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-3 my-4 col-3 fw-semibold">
+                    Breif:
+                  </label>
                   <TextField
                     required
                     id="description"
                     label="Brief Description"
                     multiline
+                    className="bg-light"
                     rows={4}
                     defaultValue={form.description}
                     name="description"
@@ -249,12 +283,16 @@ export default function NewForm() {
                       {error.description}
                     </p>
                   )}
+                  <label htmlFor="" className="col-5 fs-5   my-4 col-3 fw-bold">
+                    Full Description:
+                  </label>
                   <TextField
                     required
                     id="fullDescription"
                     label="Full Description"
                     multiline
                     rows={4}
+                    className="bg-light "
                     defaultValue={form.fullDescription}
                     name="fullDescription"
                     onChange={(defaultValue) => {
@@ -283,17 +321,17 @@ export default function NewForm() {
               {categories.map((item) => (
                 <div key={item} className="p-2">
                   {" "}
-                  <Fab
+                  <div
                     variant="extended"
                     size="small"
                     color="inherit"
                     aria-label="add"
+                    className="add-btn rounded-pill border-gray border px-2 bg-dark py-1 text-sm text-light"
                     name={item}
                     onClick={handleCategory}
                   >
-                    <NavigationIcon sx={{ mr: 1 }} />
                     {item}
-                  </Fab>
+                  </div>
                 </div>
               ))}
             </div>
@@ -306,11 +344,13 @@ export default function NewForm() {
                 </div>{" "}
               </div>
               <div className="p-2">
+             
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <Button
                     className="bg-secondary"
                     variant="contained"
                     component="label"
+                    
                   >
                     Upload
                     <input hidden accept="image/*" multiple type="file" />
@@ -320,24 +360,16 @@ export default function NewForm() {
                     color="primary"
                     aria-label="upload picture"
                     component="label"
+
                   >
                     <input hidden accept="image/*" type="file" />
                     <PhotoCamera />
                   </IconButton>
                 </Stack>
               </div>
-              <div className="col-6 mb-5 row ">
+              <div className="col-12 mb-5 row ">
                 {" "}
-                <TextField
-                  required
-                  id="imageCover"
-                  label="Book Cover Image"
-                  defaultValue={form.imageCover}
-                  name="imageCover"
-                  onChange={(defaultValue) => {
-                    handleChange("imageCover", defaultValue.target.value);
-                  }}
-                />
+              
                 {error.imageCover && (
                   <p className="text-sm text-danger px-3 py-1">
                     {error.imageCover}
@@ -357,7 +389,7 @@ export default function NewForm() {
                 error.price == null &&
                 error.priceDiscount == null && (
                   <Button
-                    className="bg-dark py-3 mb-5 text-white rounded-pill  add-btn"
+                    className="bg-dark py-3 mb-5  rounded-pill  add-btn"
                     variant="contained"
                     fullWidth={true}
                     endIcon={<SendIcon />}
@@ -370,6 +402,5 @@ export default function NewForm() {
           </div>
         </Box>
       </div>
-    </>
-  );
+    </>  );
 }
