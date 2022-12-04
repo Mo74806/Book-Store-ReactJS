@@ -27,7 +27,8 @@
   },
   "scripts": {
     
-    "start": "react-scripts start json-server --watch db.json --port 3005",
+    "start": "react-scripts start ",
+    "mock":"json-server --watch db.json --port 3005",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
