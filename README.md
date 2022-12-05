@@ -1,4 +1,4 @@
-#small e-commerce app for book shop 
+# e-commerce site for books shop
 using Reactjs and Redux and json server 
 
 
